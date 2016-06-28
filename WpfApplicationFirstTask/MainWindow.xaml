@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApplicationFirstTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplicationFirstTask"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="92*"/>
+            <RowDefinition Height="97*"/>
+            <RowDefinition Height="134*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="168*"/>
+            <ColumnDefinition Width="166*"/>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="82*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="The first coordinate" HorizontalAlignment="Left" Margin="19,37,0,0" VerticalAlignment="Top" Width="117" Height="23"/>
+        <Label x:Name="label1" Content="The second coordinate" HorizontalAlignment="Left" Margin="19,24,0,0" Grid.Row="1" VerticalAlignment="Top" Width="129" Height="23"/>
+        <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="25,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="textBox_TextChanged"/>
+        <TextBox x:Name="textBox1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="25,33,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.107,-0.61" TextChanged="textBox1_TextChanged"/>
+        <TextBox x:Name="textBox2" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="23" Margin="111,23,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="289"/>
+        <Button x:Name="button" Content="Show numbers" Grid.Column="1" HorizontalAlignment="Left" Margin="40,72,0,0" Grid.Row="2" VerticalAlignment="Top" Width="95" Click="button_Click"/>
+
+    </Grid>
+</Window>
