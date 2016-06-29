@@ -23,8 +23,10 @@ namespace WpfApplicationFirstTask
     {
         double xCoordinate;
         double yCoordinate;
-
-
+        string[] doubles;
+        /// <summary>
+        /// Main window method. Reading data from the text file
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -32,15 +34,7 @@ namespace WpfApplicationFirstTask
             string line;
             while ((line = streamReader.ReadLine()) != null)
             {
-                string[] doubles = line.Split(' ');
-                for (int j = 0; j < doubles.Length; j++)
-                {
-                    if (j % 2 != 0)
-                    {
-                        yCoordinate = double.Parse(doubles[j]);
-                        xCoordinate = double.Parse(doubles[j - 1]);
-                    }
-                }
+                doubles = line.Split(' ');
             }
         }
 
@@ -56,7 +50,16 @@ namespace WpfApplicationFirstTask
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            textBox2.Text = "X: " + xCoordinate + " Y: " + yCoordinate;
+            for (int j = 0; j < doubles.Length; j++)
+            {
+                if (j % 2 != 0)
+                {
+                    yCoordinate = double.Parse(doubles[j]);
+                    xCoordinate = double.Parse(doubles[j - 1]);
+                    textBox2.Text = "X: " + xCoordinate + " Y: " + yCoordinate;
+                
+                }
+              }          
         }
     }
 }
